@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog - BookMovieMind</title>
+    <meta name="description" content="Browse catalog of books, movies and series. Filter by genre, type and year.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<header>
+    <h1>Catalog</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="auth.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <form>
+        <input type="search" placeholder="Search..." required>
+    </form>
+</header>
+
+<main>
+    <h2>Filters</h2>
+
+    <h3>Genre</h3>
+    <label><input type="checkbox"> Drama</label><br>
+    <label><input type="checkbox"> Sci-Fi</label><br>
+    <label><input type="checkbox"> Mystery</label><br>
+    <label><input type="checkbox"> Thriller</label><br>
+
+    <h3>Type</h3>
+    <select>
+        <option value="film">Movie</option>
+        <option value="series">Series</option>
+        <option value="book">Book</option>
+    </select>
+
+    <h3>Release Year</h3>
+    <input type="number" min="1900" max="2026">
+
+    <h2>Works</h2>
+    <ul>
+        <li>
+            <a href="item_interstellar.html">Interstellar</a><br>
+            <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg" 
+                alt="Interstellar" width="200" title="Interstellar poster" loading="lazy">
+        </li><br>
+
+        <li>
+            <a href="item_monster.html">Monster (2004)</a><br>
+            <img src="https://i.pinimg.com/736x/1e/8a/39/1e8a39f20c5abf6093eccb42213e3f58.jpg"
+                alt="Monster poster" width="200" title="Monster poster" loading="lazy">
+        </li><br>
+
+        <li>
+            <a href="item_neverletmego.html">Never Let Me Go</a><br>
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg"
+                alt="Never Let Me Go book cover" width="200" title="Never Let Me Go book cover" loading="lazy">
+        </li>
+    </ul>
+</main>
+
+<footer>
+    <p>&copy; 2025 Sachek Vladyslava KA-31</p>
+</footer>
+</body>
+</html>
