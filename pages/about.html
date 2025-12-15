@@ -5,37 +5,52 @@
     <title>About - BookMovieMind</title>
     <meta name="description" content="Learn more about the BookMovieMind project, its purpose and the creator.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
 
 <body>
-<header>
-    <h1>About BookMovieMind</h1>
+<header class="header">
+  <div class="header-left">
+    <h1 class="logo">BookMovieMind</h1>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="auth.html">Login</a></li>
-        </ul>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+
+  <label for="nav-toggle" class="burger" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="nav-panel">
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="../index.html">Home</a></li>
+        <li><a class="nav-link" href="catalog.html">Catalog</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+        <li><a class="nav-link nav-link--accent" href="auth.html">Sign in</a></li>
+      </ul>
     </nav>
 
-    <form>
-        <input type="search" placeholder="Search..." required>
+    <form class="search">
+      <input class="input" type="search" placeholder="Search...">
     </form>
+  </div>
 </header>
 
 <main>
-    <h2>About the project</h2>
-    <p>
-        BookMovieMind is a platform for discovering books and films based on emotional tone, narrative style and atmosphere.
-    </p>
+    <section class="hero">
+        <h2 class="hero-title">About the project</h2>
+        <p>BookMovieMind is a platform for discovering books and films based on emotional tone, narrative style and atmosphere.</p>
+        <p>Logo source: <a href="https://www.shutterstock.com/image-vector/movie-book-logo-design-vector-illustration-1796102386">ShutterStock</a></p>
+    </section>
 
-    <h3>About the creator</h3>
-    <p>
-        This project was created by an IASA student <i>Sachek Vladyslava KA-31</i>.
-    </p>
+    <section class="hero">
+        <h2 class="hero-title">About the creator</h2>
+        <p>This project was created by an IASA student <i>Sachek Vladyslava KA-31</i>.</p>
+    </section>
 </main>
 
 <footer>

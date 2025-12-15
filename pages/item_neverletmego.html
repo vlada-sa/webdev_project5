@@ -5,29 +5,43 @@
     <title>Never Let Me Go - BookMovieMind</title>
     <meta name="description" content="Overview and details of 'Never Let Me Go' by Kazuo Ishiguro, a dystopian drama novel.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
 
 <body>
-<header>
-    <h1>Never Let Me Go - Kazuo Ishiguro</h1>
+<header class="header">
+  <div class="header-left">
+    <h1 class="logo">BookMovieMind</h1>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="auth.html">Login</a></li>
-        </ul>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+
+  <label for="nav-toggle" class="burger" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="nav-panel">
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="../index.html">Home</a></li>
+        <li><a class="nav-link" href="catalog.html">Catalog</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+        <li><a class="nav-link nav-link--accent" href="auth.html">Sign in</a></li>
+      </ul>
     </nav>
 
-    <form>
-        <input type="search" placeholder="Search..." required>
+    <form class="search">
+      <input class="input" type="search" placeholder="Search...">
     </form>
+  </div>
 </header>
 
 <main>
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol>
             <li><a href="../index.html">Home</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -35,26 +49,36 @@
         </ol>
     </nav>
 
-    <h2>Book Overview</h2>
-    <p>As a child, Kathy - now thirty-one years old - lived at Hailsham, a private school in the scenic English countryside where the children were sheltered from the outside world, brought up to believe that they were special and that their well-being was crucial not only for themselves but for the society they would eventually enter. Kathy had long ago put this idyllic past behind her, but when two of her Hailsham friends come back into her life, she stops resisting the pull of memory.</p>
-    <p>And so, as her friendship with Ruth is rekindled, and as the feelings that long ago fueled her adolescent crush on Tommy begin to deepen into love, Kathy recalls their years at Hailsham. She describes happy scenes of boys and girls growing up together, unperturbed - even comforted - by their isolation. But she describes other scenes as well: of discord and misunderstanding that hint at a dark secret behind Hailsham's nurturing facade. With the dawning clarity of hindsight, the three friends are compelled to face the truth about their childhood - and about their lives now.</p>
+    <section class="item">
+        <h2 class="item-title">Never Let Me Go</h2>
+        <p class="card-author">Author: Kazuo Ishiguro</p>
 
-    <div>
-        <img src="https://m.media-amazon.com/images/I/71DgZ3LElXL._AC_UF1000,1000_QL80_.jpg"
-        alt="Never Let Me Go book cover" height="250" title="Never Let Me Go book cover" loading="lazy">
-        <img src="https://m.media-amazon.com/images/M/MV5BMTM3NDQ1MjE2OF5BMl5BanBnXkFtZTcwNDIxNTk2Mw@@._V1_FMjpg_UX1000_.jpg"
-        alt="Never Let Me Go book cover 2" height="250" title="Never Let Me Go book cover" loading="lazy">
-    </div>
+        <h3 class="section-title">Overview</h3>
+        <p>As a child, Kathy - now thirty-one years old - lived at Hailsham, a private school in the scenic English countryside where the children were sheltered from the outside world, brought up to believe that they
+            were special and that their well-being was crucial not only for themselves but for the society they would eventually enter.</p>
+        <p>And so, as her friendship with Ruth is rekindled, and as the feelings that long ago fueled her adolescent crush on Tommy begin to deepen into love, Kathy recalls their years at Hailsham...</p>
 
-    <h3>Details</h3>
-    <ul>
-        <li>Author: Kazuo Ishiguro</li>
-        <li>Year: 2005</li>
-        <li>Pages: 288</li>
-        <li>Genre: Dystopia, Drama, Sci-Fi</li>
-    </ul>
+        <div class="item-gallery">
+            <img src="https://m.media-amazon.com/images/I/71DgZ3LElXL._AC_UF1000,1000_QL80_.jpg"
+                alt="Never Let Me Go Vintage book cover" title="Never Let Me Go Vintage book cover" loading="lazy">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTM3NDQ1MjE2OF5BMl5BanBnXkFtZTcwNDIxNTk2Mw@@._V1_FMjpg_UX1000_.jpg"
+                alt="Never Let Me Go film poster" title="Never Let Me Go film poster" loading="lazy">
+            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1613589312i/102927.jpg"
+                alt="Never Let Me Go FF book cover" title="Never Let Me Go FF book cover" loading="lazy">
+            <img src="https://cdn1.bookmanager.com/i/m.php?b=BKDVdXIulNyws1JgRy8mNg&cb=1759985969"
+                alt="Never Let Me Go Knopf Doubleday book cover" title="Never Let Me Go Knopf Doubleday book cover" loading="lazy">
+        </div>
 
-    <p>Rating: ⭑⭑⭑⭑⭑</p>
+        <h3 class="section-title">Details</h3>
+        <ul class="item-details">
+            <li>Author: Kazuo Ishiguro</li>
+            <li>Year: 2005</li>
+            <li>Pages: 288</li>
+            <li>Genre: Dystopia, Drama, Sci-Fi</li>
+        </ul>
+
+        <p class="rating">Rating: ⭑⭑⭑⭑⭑</p>
+    </section>
 </main>
 
 <footer>

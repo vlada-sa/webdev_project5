@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500&family=Public+Sans:wght@600;700&display=swap");
+
+:root {
+  --bg-main: #f6f4f2;
+  --text-main: #1d1d22;
+  --gray-light: #e4e4e4;
+  --white: #ffffff;
+
+  --accent-primary: #ff8e5e;
+  --accent-secondary: #3d5a80;
+
+  --font-main: "Inter", sans-serif;
+  --font-heading: "Public Sans", sans-serif;
+  --font-accent: "Lora", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}

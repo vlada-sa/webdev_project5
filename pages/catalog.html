@@ -5,66 +5,102 @@
     <title>Catalog - BookMovieMind</title>
     <meta name="description" content="Browse catalog of books, movies and series. Filter by genre, type and year.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
 
 <body>
-<header>
-    <h1>Catalog</h1>
+<header class="header">
+  <div class="header-left">
+    <h1 class="logo">BookMovieMind</h1>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="auth.html">Login</a></li>
-        </ul>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+
+  <label for="nav-toggle" class="burger" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="nav-panel">
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="../index.html">Home</a></li>
+        <li><a class="nav-link" href="catalog.html">Catalog</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+        <li><a class="nav-link nav-link--accent" href="auth.html">Sign in</a></li>
+      </ul>
     </nav>
 
-    <form>
-        <input type="search" placeholder="Search..." required>
+    <form class="search">
+      <input class="input" type="search" placeholder="Search...">
     </form>
+  </div>
 </header>
 
-<main>
-    <h2>Filters</h2>
+<main class="main main--catalog">
+    <div class="catalog-layout">
+        <aside class="catalog-sidebar">
+            <section class="filters">
+                <h2 class="section-title">Filters</h2>
 
-    <h3>Genre</h3>
-    <label><input type="checkbox"> Drama</label><br>
-    <label><input type="checkbox"> Sci-Fi</label><br>
-    <label><input type="checkbox"> Mystery</label><br>
-    <label><input type="checkbox"> Thriller</label><br>
+                <div class="filter-group">
+                    <h3>Genre</h3>
+                    <label class="checkbox"><input type="checkbox"> Drama</label>
+                    <label class="checkbox"><input type="checkbox"> Sci-Fi</label>
+                    <label class="checkbox"><input type="checkbox"> Mystery</label>
+                    <label class="checkbox"><input type="checkbox"> Thriller</label>
+                </div>
 
-    <h3>Type</h3>
-    <select>
-        <option value="film">Movie</option>
-        <option value="series">Series</option>
-        <option value="book">Book</option>
-    </select>
+                <div class="filter-group">
+                    <h3>Type</h3>
+                    <select class="select">
+                        <option>Movie</option>
+                        <option>Series</option>
+                        <option>Book</option>
+                    </select>
+                </div>
 
-    <h3>Release Year</h3>
-    <input type="number" min="1900" max="2026">
+                <div class="filter-group">
+                    <h3>Release Year</h3>
+                    <input class="input" type="number" min="1900" max="2026">
+                </div>
+            </section>
+        </aside>
 
-    <h2>Works</h2>
-    <ul>
-        <li>
-            <a href="item_interstellar.html">Interstellar</a><br>
-            <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg" 
-                alt="Interstellar" width="200" title="Interstellar poster" loading="lazy">
-        </li>
+        <section class="catalog-content">
+            <h2>Works</h2>
+            <ul class="catalog-grid">
+                <li class="card card--media">
+                    <a href="item_interstellar.html" class="card-link">
+                        <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg" 
+                            alt="Interstellar" width="200" title="Interstellar poster" loading="lazy">
+                        <h4 class="card-title">Interstellar</h4>
+                        <p class="card-author">Christopher Nolan</p>
+                    </a>
+                </li>
+                <li class="card card--media">
+                    <a href="item_monster.html" class="card-link">
+                        <img src="https://i.pinimg.com/736x/1e/8a/39/1e8a39f20c5abf6093eccb42213e3f58.jpg"
+                            alt="Monster poster" width="200" title="Monster poster" loading="lazy">
+                        <h4 class="card-title">Monster (2004)</h4>
+                        <p class="card-author">Naoki Urasawa</p>
+                    </a>        
+                </li>
 
-        <li>
-            <a href="item_monster.html">Monster (2004)</a><br>
-            <img src="https://i.pinimg.com/736x/1e/8a/39/1e8a39f20c5abf6093eccb42213e3f58.jpg"
-                alt="Monster poster" width="200" title="Monster poster" loading="lazy">
-        </li>
-
-        <li>
-            <a href="item_neverletmego.html">Never Let Me Go</a><br>
-            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg"
-                alt="Never Let Me Go book cover" width="200" title="Never Let Me Go book cover" loading="lazy">
-        </li>
-    </ul>
+                <li class="card card--media">
+                    <a href="item_neverletmego.html" class="card-link">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg"
+                            alt="Never Let Me Go book cover" width="200" title="Never Let Me Go book cover" loading="lazy">
+                        <h4 class="card-title">Never Let Me Go</h4>
+                        <p class="card-author">Kazuo Ishiguro</p>    
+                    </a>               
+                </li>
+            </ul>
+        </section>
+    </div>
 </main>
 
 <footer>

@@ -5,29 +5,43 @@
     <title>Interstellar - BookMovieMind</title>
     <meta name="description" content="Details, overview and trailer of Interstellar (2014), directed by Christopher Nolan.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
 
 <body>
-<header>
-    <h1>Interstellar (2014)</h1>
+<header class="header">
+  <div class="header-left">
+    <h1 class="logo">BookMovieMind</h1>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="auth.html">Login</a></li>
-        </ul>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+
+  <label for="nav-toggle" class="burger" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="nav-panel">
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="../index.html">Home</a></li>
+        <li><a class="nav-link" href="catalog.html">Catalog</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+        <li><a class="nav-link nav-link--accent" href="auth.html">Sign in</a></li>
+      </ul>
     </nav>
 
-    <form>
-        <input type="search" placeholder="Search..." required>
+    <form class="search">
+      <input class="input" type="search" placeholder="Search...">
     </form>
+  </div>
 </header>
 
 <main>
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol>
             <li><a href="../index.html">Home</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -35,27 +49,33 @@
         </ol>
     </nav>
 
+    <section class="item">
+        <h2 class="item-title">Interstellar (2014)</h2>
+        <p class="card-author">Director: Christopher Nolan</p>
 
-    <h2>Overview</h2>
-    <p>When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
+        <h3 class="section-title">Overview</h3>
+        <p>When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper,is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
 
-    <div>
-        <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg" 
-        alt="Interstellar poster" height="250" title="Interstellar poster" loading="lazy">
-        <img src="https://showbizcafe.com/wp-content/uploads/2014/11/interstellar_movie-wide.jpg" 
-        alt="Interstellar poster 2" height="250" title="Interstellar poster 2" loading="lazy">
-    </div>
+        <div class="item-gallery">
+            <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg"
+                alt="Interstellar poster" title="Interstellar poster" loading="lazy">
+            <img src="https://showbizcafe.com/wp-content/uploads/2014/11/interstellar_movie-wide.jpg"
+                alt="Interstellar still" title="Interstellar still" loading="lazy">
+            <img src="https://assets.vogue.com/photos/5891f503153ededd21da512c/master/pass/holding-interstellar.jpg"
+                alt="Interstellar Brand and Cooper" title="Interstellar Brand and Cooper" loading="lazy">
+        </div>
 
-    <h3>Details</h3>
-    <ul>
-        <li>Type: Movie</li>
-        <li>Year: 2014</li>
-        <li>Duration: 2h 49m</li>
-        <li>Director: Christopher Nolan</li>
-        <li>Genre: Sci-Fi, Drama</li>
-    </ul>
+        <h3 class="section-title">Details</h3>
+        <ul class="item-details">
+            <li>Type: Movie</li>
+            <li>Year: 2014</li>
+            <li>Duration: 2h 49m</li>
+            <li>Director: Christopher Nolan</li>
+            <li>Genre: Sci-Fi, Drama</li>
+        </ul>
 
-    <p>Rating: ⭑⭑⭑⭑⭑</p>
+        <p class="rating">Rating: ⭑⭑⭑⭑⭑</p>
+    </section>
 </main>
 
 <footer>

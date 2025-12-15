@@ -5,45 +5,81 @@
     <title>BookMovieMind - Home</title>
     <meta name="description" content="BookMovieMind — discover books, movies and series by mood, genre and emotional tone.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 
 <body>
-<header>
-    <h1>BookMovieMind</h1>
+<header class="header">
+  <div class="header-left">
+    <h1 class="logo">BookMovieMind</h1>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/catalog.html">Catalog</a></li>
-            <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/contacts.html">Contacts</a></li>
-            <li><a href="pages/auth.html">Login</a></li>
-        </ul>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+
+  <label for="nav-toggle" class="burger" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="nav-panel">
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="pages/catalog.html">Catalog</a></li>
+        <li><a class="nav-link" href="pages/about.html">About</a></li>
+        <li><a class="nav-link" href="pages/contacts.html">Contacts</a></li>
+        <li><a class="nav-link nav-link--accent" href="pages/auth.html">Sign in</a></li>
+      </ul>
     </nav>
 
-    <form>
-        <input type="search" placeholder="Search..." required>
+    <form class="search">
+      <input class="input" type="search" placeholder="Search...">
     </form>
+  </div>
 </header>
 
 <main>
-    <h2>Discover books and movies by mood</h2>
+    <section class="hero">
+        <h2 class="hero-title">Discover books and movies by mood</h2>
+        <p>BookMovieMind is a platform for discovering books and films based on emotional tone, narrative style and atmosphere.</p>
+    </section>
+    <section class="hero">
+        <h3 class="hero-title">Popular picks</h3>
+    </section>
 
-    <h3>Popular picks</h3>
-    <ul>
-        <li><a href="pages/item_interstellar.html">Interstellar</a></li>
-        <li><a href="pages/item_monster.html">Monster (2004)</a></li>
-        <li><a href="pages/item_neverletmego.html">Never Let Me Go</a></li>
-    </ul>
+    <section class="popular">
+        <ul class="card-grid card-grid--center">
+            <li class="card card--media">
+                <a href="pages/item_interstellar.html" class="card-link">
+                    <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg"
+                       alt="Interstellar poster" title="Interstellar poster" loading="lazy">
+                    <h4 class="card-title">Interstellar</h4>
+                    <p class="card-author">Christopher Nolan</p>
+                </a>
+            </li>
 
-    <div>
-        <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg"
-            alt="Interstellar poster" height="250" title="Interstellar poster" loading="lazy">
-        <img src="https://i.pinimg.com/736x/1e/8a/39/1e8a39f20c5abf6093eccb42213e3f58.jpg"
-            alt="Monster poster" height="250" title="Monster poster" loading="lazy">
-        <img src="https://m.media-amazon.com/images/I/71DgZ3LElXL._AC_UF1000,1000_QL80_.jpg"
-            alt="Never Let Me Go cover" height="250" title="Never Let Me Go cover" loading="lazy">
-    </div>
+            <li class="card card--media">
+                <a href="pages/item_monster.html" class="card-link">
+                    <img src="https://i.pinimg.com/736x/1e/8a/39/1e8a39f20c5abf6093eccb42213e3f58.jpg"
+                        alt="Monster poster" title="Monster poster" loading="lazy">
+                    <h4 class="card-title">Monster (2004)</h4>
+                    <p class="card-author">Naoki Urasawa</p>
+                </a>
+            </li>
+
+            <li class="card card--media">
+                <a href="pages/item_neverletmego.html" class="card-link">
+                    <img src="https://m.media-amazon.com/images/I/71DgZ3LElXL._AC_UF1000,1000_QL80_.jpg"
+                        alt="Never Let Me Go cover" title="Never Let Me Go cover" loading="lazy">
+                    <h4 class="card-title">Never Let Me Go</h4>
+                    <p class="card-author">Kazuo Ishiguro</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+ 
 </main>
 
 <footer>

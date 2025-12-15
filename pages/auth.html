@@ -2,53 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Auth - BookMovieMind</title>
+    <title>Sign in - BookMovieMind</title>
     <meta name="description" content="Login or register to your BookMovieMind account.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
 
 <body>
-<header>
-    <h1>Log in / Register</h1>
+<header class="header">
+  <div class="header-left">
+    <h1 class="logo">BookMovieMind</h1>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="auth.html">Login</a></li>
-        </ul>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+
+  <label for="nav-toggle" class="burger" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="nav-panel">
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="../index.html">Home</a></li>
+        <li><a class="nav-link" href="catalog.html">Catalog</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+        <li><a class="nav-link nav-link--accent" href="auth.html">Sign in</a></li>
+      </ul>
     </nav>
+
+    <form class="search">
+      <input class="input" type="search" placeholder="Search...">
+    </form>
+  </div>
 </header>
 
-<main>
-    <h2>Log in your account</h2>
+<main class="main">
+  <section class="auth">
 
-    <form action="#" method="post">
-        <label for="login_email">Email:</label>
-        <input type="email" id="login_email" name="email" placeholder="example@gmail.com" required><br><br>
+    <form class="form form--auth" action="#" method="post">
+      <h2 class="section-title">Log in your account</h2>
 
-        <label for="login_password">Password:</label>
-        <input type="password" id="login_password" name="password" placeholder="at least 8 characters" minlength="8" required><br><br>
+      <div class="form-group">
+        <label for="login_email">Email</label>
+        <input class="input" type="email" id="login_email" name="email"
+               placeholder="example@gmail.com" required>
+      </div>
 
-        <button type="submit">Log in</button>
+      <div class="form-group">
+        <label for="login_password">Password</label>
+        <input class="input" type="password" id="login_password" name="password"
+               placeholder="at least 8 characters" minlength="8" required>
+      </div>
+
+      <button class="btn" type="submit">Log in</button>
     </form>
 
-    <h2>Create an account</h2>
+    <form class="form form--auth" action="#" method="post">
+      <h2 class="section-title">Create an account</h2>
 
-    <form action="#" method="post">
-        <label for="register_email">Email:</label>
-        <input type="email" id="register_email" name="email" placeholder="example@gmail.com" required><br><br>
+      <div class="form-group">
+        <label for="register_email">Email</label>
+        <input class="input" type="email" id="register_email" name="email"
+               placeholder="example@gmail.com" required>
+      </div>
 
-        <label for="register_password">Password:</label>
-        <input type="password" id="register_password" name="password" placeholder="at least 8 characters" minlength="8" required><br><br>
+      <div class="form-group">
+        <label for="register_password">Password</label>
+        <input class="input" type="password" id="register_password" name="password"
+               placeholder="at least 8 characters" minlength="8" required>
+      </div>
 
-        <label for="repeat_password">Repeat password:</label>
-        <input type="password" id="repeat_password" name="repeat_password" placeholder="at least 8 characters" minlength="8" required><br><br>
+      <div class="form-group">
+        <label for="repeat_password">Repeat password</label>
+        <input class="input" type="password" id="repeat_password" name="repeat_password"
+               placeholder="at least 8 characters" minlength="8" required>
+      </div>
 
-        <button type="submit">Register</button>
+      <button class="btn btn--secondary" type="submit">Register</button>
     </form>
+
+  </section>
 </main>
 
 <footer>
