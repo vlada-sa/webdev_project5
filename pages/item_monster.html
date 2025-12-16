@@ -34,9 +34,13 @@
       </ul>
     </nav>
 
-    <form class="search">
-      <input class="input" type="search" placeholder="Search...">
+    <form class="search" action="#" method="get">
+      <input class="input" name="q" type="search" placeholder="Search...">
     </form>
+
+    <button class="btn theme-toggle" type="button" id="theme-toggle" aria-pressed="false">
+        ☽
+    </button>
   </div>
 </header>
 
@@ -54,8 +58,19 @@
         <p class="card-author">Creator: Naoki Urasawa</p>
 
         <h3 class="section-title">Overview</h3>
-        <p>Tenma, a brilliant neurosurgeon with a promising future, risks his career to save the life of a critically wounded young boy. The boy, now a charismatic young man, reappears 9 years later in the midst
-            of a string of unusual serial murders.</p>
+
+        <div class="accordion">
+            <div class="accordion-content">
+                <p>Tenma, a brilliant neurosurgeon with a promising future, risks his career to save the life of a critically wounded young boy. The boy, now a charismatic young man, reappears 9 years later in the midst 
+                    of a string of unusual serial murders.</p>
+                <p>Dr. Kenzo Tenma has it all. He is by far the most skilled surgeon at Isler memorial, a well respected doctor amongst his peers and is even engaged to the directors daughter, Eva. 
+                    But all this changes one fateful day when a young boy and his twin are brought in with a severe head injury.</p>
+            </div>
+
+            <button class="btn btn--secondary accordion-toggle">
+                Show more
+            </button>
+        </div>
 
         <div class="item-gallery">
             <img src="https://i.pinimg.com/736x/1e/8a/39/1e8a39f20c5abf6093eccb42213e3f58.jpg"
@@ -80,7 +95,8 @@
 
 
 <footer>
-    <p>&copy; 2025 Sachek Vladyslava KA-31</p>
+    <p>&copy; <span id="current-year"></span> Sachek Vladyslava KA-31</p>
 </footer>
+<script src="../js/main.js"></script>
 </body>
 </html>

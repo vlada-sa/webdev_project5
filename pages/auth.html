@@ -34,62 +34,69 @@
       </ul>
     </nav>
 
-    <form class="search">
-      <input class="input" type="search" placeholder="Search...">
+    <form class="search" action="#" method="get">
+      <input class="input" name="q" type="search" placeholder="Search...">
     </form>
+
+    <button class="btn theme-toggle" type="button" id="theme-toggle" aria-pressed="false">
+        ☽
+    </button>
   </div>
 </header>
 
 <main class="main">
   <section class="auth">
 
-    <form class="form form--auth" action="#" method="post">
+    <form class="form form--auth" id="loginForm" action="#" method="post" novalidate>
       <h2 class="section-title">Log in your account</h2>
 
       <div class="form-group">
         <label for="login_email">Email</label>
-        <input class="input" type="email" id="login_email" name="email"
-               placeholder="example@gmail.com" required>
+        <input class="input" type="email" id="login_email" name="email" placeholder="example@gmail.com" required>
+        <small class="field-error" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
         <label for="login_password">Password</label>
-        <input class="input" type="password" id="login_password" name="password"
-               placeholder="at least 8 characters" minlength="8" required>
+        <input class="input" type="password" id="login_password" name="password" placeholder="at least 8 characters" required>
+        <small class="field-error" aria-live="polite"></small>
       </div>
 
       <button class="btn" type="submit">Log in</button>
+      <p class="form-message" role="status" aria-live="polite"></p>
     </form>
 
-    <form class="form form--auth" action="#" method="post">
+    <form class="form form--auth" id="registerForm" action="#" method="post" novalidate>
       <h2 class="section-title">Create an account</h2>
 
       <div class="form-group">
         <label for="register_email">Email</label>
-        <input class="input" type="email" id="register_email" name="email"
-               placeholder="example@gmail.com" required>
+        <input class="input" type="email" id="register_email" name="email" placeholder="example@gmail.com" required>
+        <small class="field-error" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
         <label for="register_password">Password</label>
-        <input class="input" type="password" id="register_password" name="password"
-               placeholder="at least 8 characters" minlength="8" required>
+        <input class="input" type="password" id="register_password" name="password" placeholder="at least 8 characters" required>
+        <small class="field-error" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
         <label for="repeat_password">Repeat password</label>
-        <input class="input" type="password" id="repeat_password" name="repeat_password"
-               placeholder="at least 8 characters" minlength="8" required>
+        <input class="input" type="password" id="repeat_password" name="repeat_password" placeholder="Repeat password" required>
+        <small class="field-error" aria-live="polite"></small>
       </div>
 
-      <button class="btn btn--secondary" type="submit">Register</button>
+      <button class="btn" type="submit">Register</button>
+      <p class="form-message" role="status" aria-live="polite"></p>
     </form>
 
   </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Sachek Vladyslava KA-31</p>
+    <p>&copy; <span id="current-year"></span> Sachek Vladyslava KA-31</p>
 </footer>
+<script src="../js/main.js"></script>
 </body>
 </html>

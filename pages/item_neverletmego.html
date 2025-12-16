@@ -34,9 +34,13 @@
       </ul>
     </nav>
 
-    <form class="search">
-      <input class="input" type="search" placeholder="Search...">
+    <form class="search" action="#" method="get">
+      <input class="input" name="q" type="search" placeholder="Search...">
     </form>
+
+    <button class="btn theme-toggle" type="button" id="theme-toggle" aria-pressed="false">
+        ☽
+    </button>
   </div>
 </header>
 
@@ -54,9 +58,20 @@
         <p class="card-author">Author: Kazuo Ishiguro</p>
 
         <h3 class="section-title">Overview</h3>
-        <p>As a child, Kathy - now thirty-one years old - lived at Hailsham, a private school in the scenic English countryside where the children were sheltered from the outside world, brought up to believe that they
-            were special and that their well-being was crucial not only for themselves but for the society they would eventually enter.</p>
-        <p>And so, as her friendship with Ruth is rekindled, and as the feelings that long ago fueled her adolescent crush on Tommy begin to deepen into love, Kathy recalls their years at Hailsham...</p>
+    
+        <div class="accordion">
+            <div class="accordion-content">
+                <p>As a child, Kathy - now thirty-one years old - lived at Hailsham, a private school in the scenic English 
+                    countryside where the children were sheltered from the outside world, brought up to believe that they were special and that their well-being was 
+                    crucial not only for themselves but for the society they would eventually enter.</p>
+                <p>And so, as her friendship with Ruth is rekindled, and as the feelings that long ago fueled her adolescent crush on Tommy begin to deepen 
+                    into love, Kathy recalls their years at Hailsham...</p>
+            </div>
+
+            <button class="btn btn--secondary accordion-toggle">
+                Show more
+            </button>
+        </div>
 
         <div class="item-gallery">
             <img src="https://m.media-amazon.com/images/I/71DgZ3LElXL._AC_UF1000,1000_QL80_.jpg"
@@ -82,7 +97,8 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 Sachek Vladyslava KA-31</p>
+    <p>&copy; <span id="current-year"></span> Sachek Vladyslava KA-31</p>
 </footer>
+<script src="../js/main.js"></script>
 </body>
 </html>

@@ -34,9 +34,13 @@
       </ul>
     </nav>
 
-    <form class="search">
-      <input class="input" type="search" placeholder="Search...">
+    <form class="search" action="#" method="get">
+      <input class="input" name="q" type="search" placeholder="Search...">
     </form>
+
+    <button class="btn theme-toggle" type="button" id="theme-toggle" aria-pressed="false">
+        ☽
+    </button>
   </div>
 </header>
 
@@ -54,7 +58,20 @@
         <p class="card-author">Director: Christopher Nolan</p>
 
         <h3 class="section-title">Overview</h3>
-        <p>When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper,is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
+        
+        <div class="accordion">
+            <div class="accordion-content">
+                <p>When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper,is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p> 
+                <p>In the near future around the American Midwest, Cooper, an ex-science engineer and pilot, is tied to his farming land with his daughter Murph and son Tom. As devastating sandstorms ravage Earth's crops, 
+                    the people of Earth realize their life here is coming to an end as food begins to run out. Eventually stumbling upon a N.A.S.A. base 6 hours from Cooper's home, he is asked to go on a daring mission 
+                    with a few other scientists into a wormhole because of Cooper's scientific intellect and ability to pilot aircraft unlike the other crew members. In order to find a new home while Earth decays, 
+                    Cooper must decide to either stay, or risk never seeing his children again in order to save the human race by finding another habitable planet.</p>
+            </div>
+
+            <button class="btn btn--secondary accordion-toggle">
+                Show more
+            </button>
+        </div>
 
         <div class="item-gallery">
             <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg"
@@ -79,7 +96,8 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 Sachek Vladyslava KA-31</p>
+    <p>&copy; <span id="current-year"></span> Sachek Vladyslava KA-31</p>
 </footer>
+<script src="../js/main.js"></script>
 </body>
 </html>

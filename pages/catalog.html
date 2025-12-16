@@ -34,9 +34,12 @@
       </ul>
     </nav>
 
-    <form class="search">
-      <input class="input" type="search" placeholder="Search...">
+    <form class="search" action="#" method="get">
+      <input class="input" name="q" type="search" placeholder="Search...">
     </form>
+    <button class="btn theme-toggle" type="button" id="theme-toggle" aria-pressed="false">
+        ☽
+    </button>
   </div>
 </header>
 
@@ -73,7 +76,7 @@
         <section class="catalog-content">
             <h2>Works</h2>
             <ul class="catalog-grid">
-                <li class="card card--media">
+                <li class="card card--media" data-title="interstellar" data-author="christopher nolan">
                     <a href="item_interstellar.html" class="card-link">
                         <img src="https://m.media-amazon.com/images/I/91vIHsL-zjL._AC_UF894,1000_QL80_.jpg" 
                             alt="Interstellar" width="200" title="Interstellar poster" loading="lazy">
@@ -81,7 +84,7 @@
                         <p class="card-author">Christopher Nolan</p>
                     </a>
                 </li>
-                <li class="card card--media">
+                <li class="card card--media" data-title="monster" data-author="naoki urasawa">
                     <a href="item_monster.html" class="card-link">
                         <img src="https://i.pinimg.com/736x/1e/8a/39/1e8a39f20c5abf6093eccb42213e3f58.jpg"
                             alt="Monster poster" width="200" title="Monster poster" loading="lazy">
@@ -90,7 +93,7 @@
                     </a>        
                 </li>
 
-                <li class="card card--media">
+                <li class="card card--media" data-title="never let me go" data-author="kazuo ishiguro">
                     <a href="item_neverletmego.html" class="card-link">
                         <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1353048590i/6334.jpg"
                             alt="Never Let Me Go book cover" width="200" title="Never Let Me Go book cover" loading="lazy">
@@ -104,7 +107,8 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 Sachek Vladyslava KA-31</p>
+    <p>&copy; <span id="current-year"></span> Sachek Vladyslava KA-31</p>
 </footer>
+<script src="../js/main.js"></script>
 </body>
 </html>

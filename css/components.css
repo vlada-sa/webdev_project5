@@ -11,13 +11,13 @@ input:focus, textarea:focus {
   border-color: var(--accent-secondary);
 }
 
-input:invalid {
+/* input:invalid {
   border-color: #e63946;
 }
 
 input:valid {
   border-color: #2a9d8f;
-}
+} */
 
 /* Navigation */
 
@@ -52,26 +52,20 @@ input:valid {
 }
 
 .nav-link {
-  font-weight: 500;
-  font-size: 0.9rem;
-  padding-bottom: 2px;
+  color: var(--text-main); 
   position: relative;
-  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.9rem;      
+  padding: 0.35rem 0.75rem;       
+  border-radius: 999px;           
+  background: transparent;        
+  text-decoration: none;
+
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
-  background: var(--accent-secondary);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
+.nav-link.is-hovered {
+  background: var(--gray-light);
 }
 
 .nav-link--accent {
@@ -96,6 +90,7 @@ input:valid {
 .card-grid {
   display: grid;
   gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .card {
@@ -322,3 +317,64 @@ input:valid {
   margin-top: 1rem;
   font-weight: 500;
 }
+/* Accordion*/
+
+.accordion {
+  max-width: 700px;
+}
+
+.accordion-content {
+  max-height: 4.5em;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.6;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-left: 1rem;
+  background: var(--bg-main); 
+}
+
+.accordion.is-open .accordion-content {
+  max-height: 1000px;
+}
+
+.accordion.is-open .accordion-content::after {
+  display: none;
+}
+
+.accordion-content p + p {
+  margin-top: 1rem;
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+/* Form validation */
+.field-error {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #e63946;
+  min-height: 1em; 
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-weight: 500;
+  min-height: 1.2em;
+}
+
+.form-status.is-success { color: #2a9d8f; }
+.form-status.is-error { color: #e63946; }
+
+.is-invalid {
+  border-color: #e63946 !important;
+}
+
